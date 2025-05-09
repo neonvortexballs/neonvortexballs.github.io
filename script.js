@@ -7,13 +7,15 @@ let messageInput = document.getElementById('message-input');
 let usernameInput = document.getElementById('username');
 let setUsernameButton = document.getElementById('set-username-btn');
 let usernameContainer = document.querySelector('.username-container');
+let chatContainer = document.querySelector('.chat-container');
 
-// Show the username input prompt
+// Show the username input prompt first
 setUsernameButton.addEventListener('click', () => {
     username = usernameInput.value.trim();
     if (username.length > 0) {
+        // Hide username input and show chat interface
         usernameContainer.style.display = 'none';
-        document.querySelector('.chat-container').style.display = 'flex';
+        chatContainer.style.display = 'flex';
     } else {
         alert("Please enter a valid username.");
     }

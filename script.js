@@ -6,16 +6,19 @@ let sendButton = document.getElementById('send-btn');
 let messageInput = document.getElementById('message-input');
 let usernameInput = document.getElementById('username');
 let setUsernameButton = document.getElementById('set-username-btn');
-let usernameContainer = document.querySelector('.username-container');
-let chatContainer = document.querySelector('.chat-container');
+let usernameContainer = document.getElementById('username-container');
+let chatContainer = document.getElementById('chat-container');
 
 // Show the username input prompt first
+console.log('Page loaded. Waiting for username...');
 setUsernameButton.addEventListener('click', () => {
     username = usernameInput.value.trim();
+    console.log('Username set:', username);
     if (username.length > 0) {
         // Hide username input and show chat interface
         usernameContainer.style.display = 'none';
         chatContainer.style.display = 'flex';
+        console.log('Chat interface shown');
     } else {
         alert("Please enter a valid username.");
     }

@@ -83,7 +83,7 @@ button:hover {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Keep messages at the bottom */
+    justify-content: flex-end;
 }
 
 .chat-input {
